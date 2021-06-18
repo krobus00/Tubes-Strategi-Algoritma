@@ -6,20 +6,19 @@ def SelectionSort(arr):
                 min_idx = j 
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
 
-def MaxActivities(arr, n):
+def MaxActivities(arr):
     selected = []
     SelectionSort(arr)
     i = 0
     selected.append(arr[i]) 
-    for j in range(1, n):
+    for j in range(1, len(arr)):
       if arr[j][0] >= arr[i][1]:
           selected.append(arr[j])
           i = j
     return selected
  
 
-Activity = [[5, 9], [1, 2], [3, 4], [0, 6],[5, 7], [8, 9]]
-n = len(Activity)
-selected = MaxActivities(Activity, n)
+activity = [[5, 9], [1, 2], [3, 4], [0, 6],[5, 7], [8, 9]]
+selected = MaxActivities(activity)
 print("Following activities are selected :")
 print(selected)
