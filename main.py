@@ -1,5 +1,5 @@
 def SelectionSort(arr):
-    for i in range(len(arr)):
+    for i in range(len(arr)-1):
         min_idx = i
         for j in range(i+1, len(arr)):
             if arr[min_idx][1] > arr[j][1]:
